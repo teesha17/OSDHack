@@ -4,8 +4,17 @@ import "./App.css"
 import Home from './screens/homepage/Home.jsx'
 import Contact from './screens/contact/Contact.jsx'
 import About from './screens/about/About.jsx'
-import Login from './screens/Login.jsx'
-import SignUp from './screens/SignUp.jsx'
+import Login from './screens/login/Login.jsx'
+import SignUp from './screens/signup/SignUp.jsx'
+import SignUpPre from './screens/SignUpPre.jsx'
+import SignUpArchitect from './screens/signup/SignUpArchitect.jsx'
+import SignUpContractor from './screens/signup/SignUpContractor.jsx'
+import SignUpPackers from './screens/signup/SignUpPackers.jsx'
+import SignUpSupplier from './screens/signup/SignUpSupplier.jsx'
+import LoginArchitect from './screens/login/LoginArchitect.jsx'
+import LoginContractor from './screens/login/LoginContractor.jsx'
+import LoginPackers from './screens/login/LoginPackers.jsx'
+import LoginSupplier from './screens/login/LoginSupplier.jsx'
 export default function App() {
   return (
     <Router>
@@ -14,7 +23,16 @@ export default function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/signup' element={<SignUpPre/>}/>
         <Route path='/createuser' element={<SignUp/>}/>
+        <Route path='/createarchitect' element={<SignUpArchitect/>}/>
+        <Route path='/createsupplier' element={<SignUpSupplier/>}/>
+        <Route path='/createpackersmovers' element={<SignUpPackers/>}/>
+        <Route path='/createcontractor' element={<SignUpContractor/>}/>
+        <Route path='/loginarchitect' element={<LoginArchitect/>}/>
+        <Route path='/loginsupplier' element={<LoginSupplier/>}/>
+        <Route path='/loginpackers' element={<LoginPackers/>}/>
+        <Route path='/logincontractor' element={<LoginContractor/>}/>
       </Routes>
     </Router>
   )

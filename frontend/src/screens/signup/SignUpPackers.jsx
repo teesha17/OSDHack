@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link,json,useNavigate } from 'react-router-dom'
-export default function SignUp() 
+export default function SignUpPackers() 
 {
   const navigate = useNavigate();
   const [credentials , setCredentials] = useState({
@@ -10,14 +10,13 @@ export default function SignUp()
     location:""
   })
 
-
   const handleSubmit = async(e)=>{
     e.preventDefault();
     console.log(JSON.stringify({name: credentials.name,
       email: credentials.email,
       password: credentials.password,
       location: credentials.location,}))
-    const response =await fetch("http://localhost:3000/api/createuser",{
+    const response =await fetch("http://localhost:3000/api/createpackersmovers",{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
@@ -72,7 +71,7 @@ export default function SignUp()
   </div>
   
   <button type="submit" className="m-3 btn btn-success">Submit</button>
-  <Link to="/login" className='m-3 btn btn-danger'>Already a user?</Link>
+  <Link to="/loginpackers" className='m-3 btn btn-danger'>Already a user?</Link>
 </form>
 </div>
     </>

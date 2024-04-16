@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { Link ,json,useNavigate} from 'react-router-dom';
 
-export default function Login() {
+export default function LoginSupplier() {
   const [credentials , setCredentials] = useState({
     email:"",
     password:"",
@@ -13,7 +13,7 @@ let navigate = useNavigate();
     console.log(JSON.stringify({
       email: credentials.email,
       password: credentials.password,}))
-    const response =await fetch("https://localhost:3000/api/loginuser",{
+    const response =await fetch("http://localhost:3000/api/loginsupplier",{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
@@ -59,7 +59,7 @@ let navigate = useNavigate();
     <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" name="password" value={credentials.password} onChange={handleChange}/>
   </div>
   <button type="submit" className="m-3 btn btn-dark">Submit</button>
-  <Link to="/createuser" className='m-3 btn btn-danger'>Not a user?</Link>
+  <Link to="/createsupplier" className='m-3 btn btn-danger'>Not a user?</Link>
 </form>
 </div>
    

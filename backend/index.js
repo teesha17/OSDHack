@@ -10,7 +10,10 @@ app.get('/',(req,res)=>{
 })
 app.use(express.json())
 app.use('/api',require("./Routes/CreateUser"))
-
+app.use('/api',require("./Routes/CreateArchitect"))
+app.use('/api',require("./Routes/CreatePackersMovers"))
+app.use('/api',require("./Routes/CreateSupplier"))
+app.use('/api',require("./Routes/CreateContractor"))
 
 
 app.listen(port,()=>
