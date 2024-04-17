@@ -11,7 +11,7 @@ import IconsSection from '../../Components/Icons/Icon';
 import FooterSection from '../../Components/footer/Footer';
 import ServicesSection from '../../Components/Services/Services';
 import PricingComponent from '../../Components/Pricing/Pricing';
-function Home() {
+function OurHome() {
   return (
     <div className="App">
     <Header/>
@@ -28,4 +28,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default OurHome;
