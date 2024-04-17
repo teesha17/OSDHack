@@ -1,16 +1,16 @@
 
 
-// import Header from './Components/Header/Header';
-import Header from '../../Components/Header/Header';
-import HomeSection from '../../Components/Home/Home';
-// import ProfileCards from '../../Components/People/People';
-import Testimonials from '../../Components/Testimonial/Testimonial';
-import NumberCountingAnimation from '../../Components/Counter/Counter';
-import AboutSection from '../../Components/About/About';
-import IconsSection from '../../Components/Icons/Icon';
-import FooterSection from '../../Components/footer/Footer';
-import ServicesSection from '../../Components/Services/Services';
-import PricingComponent from '../../Components/Pricing/Pricing';
+// import Header from './components/Header/Header';
+import Header from '../../components/Header/Header';
+import HomeSection from '../../components/Home/Home';
+// import ProfileCards from '../../components/People/People';
+import Testimonials from '../../components/Testimonial/Testimonial';
+import NumberCountingAnimation from '../../components/Counter/Counter';
+import AboutSection from '../../components/About/About';
+import IconsSection from '../../components/Icons/Icon';
+import FooterSection from '../../components/footer/Footer';
+import ServicesSection from '../../components/Services/Services';
+import PricingComponent from '../../components/Pricing/Pricing';
 function OurHome() {
   return (
     <div className="App">
