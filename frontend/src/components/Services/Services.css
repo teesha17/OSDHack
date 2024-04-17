@@ -1,0 +1,104 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /* --primary-color: #f8f208; */
+  --primary-color-dark: #ee9821;
+  /* --secondary-color: #04091d; */
+  /* --secondary-color-light: #0f1221;
+  --secondary-color-dark: #03060f; */
+  /* --text-light: #94a3b8; */
+  --white: #ffffff;
+  --max-width: 1200px;
+  --gradient: linear-gradient(
+    to right,
+    var(--primary-color-dark),
+    var(--primary-color)
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.service__grid {
+    margin-top: 4rem;
+    /* display: grid; */
+    display: flex;
+    justify-content: center;
+    /* width: 30%; */
+    gap: 4rem;
+  }
+  
+  .service__card {
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+    text-align: center;
+    background-color: rgb(250, 225, 225);
+    border-bottom: 2px solid transparent;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .service__card h4{
+font-size: 4rem;
+  }
+  
+  .service__card:hover {
+    border-color: var(--primary-color-dark);
+  }
+  
+  .service__card span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4px 10px;
+    font-size: 2rem;
+    background-color: var(--secondary-color-light);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+  .service__card:hover span {
+  color : red;
+    background-image: orange;
+  }
+  
+  .service__card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+  
+  .service__card p {
+    color: brown;
+  }
+  .section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .section__header {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  .section__subheader {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .section__description {
+    max-width: 600px;
+    margin-top: 1rem;
+    margin-inline: auto;
+    color: black;;
+    text-align: center;
+    font-size: larger;
+  }
