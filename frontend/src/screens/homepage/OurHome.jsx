@@ -11,6 +11,7 @@ import IconsSection from '../../Components/Icons/Icon';
 import FooterSection from '../../Components/footer/Footer';
 import ServicesSection from '../../Components/Services/Services';
 import PricingComponent from '../../Components/Pricing/Pricing';
+import OrderCard from '../../Components/OrderTrack/Track';
 function OurHome() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function OurHome() {
     <ServicesSection/>
   <PricingComponent/>
     <Testimonials/>
+    <OrderCard/>
     <FooterSection/>
     {/* <ProfileCards/> */}
     </div>
