@@ -1,9 +1,9 @@
 import React from 'react';
 import "./Icon.css"
-import image1 from "../../assets/icon-1.png";
-import image2 from "../../assets/icon-2.png";
-import image3 from "../../assets/icon-3.png";
-import image4 from "../../assets/icon-4.png";
+import image1 from "/icon-1.png";
+import image2 from "/icon-2.png";
+import image3 from "/icon-3.png";
+import image4 from "/icon-4.png";
 
 const IconsSection = () => {
     return (
