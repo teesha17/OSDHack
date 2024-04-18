@@ -122,6 +122,116 @@
 // module.exports = router;
 
 
+// const express = require('express');
+// const multer = require('multer');
+// const path = require('path');
+// const fs = require('fs');
+// const router = express.Router();
+// const User = require('../models/Architect.js');
+// const bcrypt = require('bcryptjs');
+// const jwt = require('jsonwebtoken');
+// const jwtSecret = "my name is x";
+// const { body, validationResult } = require('express-validator');
+
+// // Multer configuration
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         const uploadDir = './uploads/';
+//         if (!fs.existsSync(uploadDir)) {
+//             fs.mkdirSync(uploadDir);
+//         }
+//         cb(null, uploadDir);
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, Date.now() + path.extname(file.originalname));
+//     }
+// });
+
+// const upload = multer({ storage: storage,
+// fileFilter: function(req,file,callback){
+//     if(file.mimetype == "image/png"||file.mimetype == "image/jpg"){
+//         callback(null,true)
+//     }else{
+//         console.log("only jpg and png files supported")
+//         callback(null,false)
+//     }
+// }});
+
+// router.post("/createarchitect", upload.single('file'), [
+//     body('email').isEmail(),
+//     body('name').isLength({ min: 5 }),
+//     body('password', 'incorrect password').isLength({ min: 5 })
+// ]
+//     , async (req, res) => {
+//         const errors = validationResult(req);
+//         if (!errors.isEmpty()) {
+//             return res.status(400).json({ errors: errors.array() });
+//         }
+
+//         const salt = await bcrypt.genSalt(10);
+//         let secPassword = await bcrypt.hash(req.body.password, salt)
+
+//         try {
+//              let file = req.file ? req.file.path : ''; // Check if file was uploaded
+//             // if(req.file)
+//             // {
+//             //     let file = req.file.path;
+//             // }
+//             await User.create({
+//                 name: req.body.name,
+//                 password: secPassword,
+//                 email: req.body.email,
+//                 location: req.body.location,
+//                 file: file // Save file path in database
+//             });
+//             res.json({ success: true });
+//         } catch (error) {
+//             console.log(error);
+//             res.json({ success: false });
+//         }
+//     });
+
+// router.post("/loginarchitect", [
+//     body('email').isEmail(),
+//     body('password', 'incorrect password').isLength({ min: 5 })
+// ], async (req, res) => {
+//     let email = req.body.email;
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//         return res.status(400).json({ errors: errors.array() });
+//     }
+//     try {
+//         let userData = await User.findOne({ email });
+//         if (!userData) {
+//             return res.status(400).json({ errors: "Try logging in with correct credentials" });
+//         }
+
+//         const pwdCompare = await bcrypt.compare(req.body.password, userData.password);
+
+//         if (!pwdCompare) {
+//             return res.status(400).json({ errors: "Try logging in with correct credentials" });
+//         }
+//         const data = {
+//             user: {
+//                 id: userData.id
+//             }
+//         }
+//         const authToken = jwt.sign(data, jwtSecret)
+//         return res.json({ success: true, authToken: authToken });
+
+//     } catch (error) {
+//         console.log(error);
+//         res.json({ success: false });
+//     }
+// });
+
+// module.exports = router;
+
+
+
+
+
+
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
@@ -130,65 +240,79 @@ const router = express.Router();
 const User = require('../models/Architect.js');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const upload = require('../middleware/upload.js')
 const jwtSecret = "my name is x";
 const { body, validationResult } = require('express-validator');
 
-// Multer configuration
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        const uploadDir = './uploads/';
-        if (!fs.existsSync(uploadDir)) {
-            fs.mkdirSync(uploadDir);
-        }
-        cb(null, uploadDir);
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname));
-    }
-});
+// // Multer configuration
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         const uploadDir = './uploads/';
+//         if (!fs.existsSync(uploadDir)) {
+//             fs.mkdirSync(uploadDir);
+//         }
+//         cb(null, uploadDir);
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, Date.now() + path.extname(file.originalname));
+//     }
+// });
 
-const upload = multer({ storage: storage });
+// const upload = multer({ 
+//     storage: storage,
+//     fileFilter: function(req, file, callback) {
+//         if (file.mimetype == "image/png" || file.mimetype == "image/jpg") {
+//             callback(null, true);
+//         } else {
+//             console.log("Only jpg and png files are supported");
+//             callback(null, false);
+//         }
+//     },
+//     limits: {
+//         fileSize: 1024 * 1024 * 2 // 2 MB file size limit
+//     } 
+// });
 
-router.post("/createarchitect", upload.single('file'), [
+router.post("/createarchitect", upload.single('avatar'), [
     body('email').isEmail(),
     body('name').isLength({ min: 5 }),
     body('password', 'incorrect password').isLength({ min: 5 })
-]
-    , async (req, res) => {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() });
-        }
+], async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
 
-        const salt = await bcrypt.genSalt(10);
-        let secPassword = await bcrypt.hash(req.body.password, salt)
+    const salt = await bcrypt.genSalt(10);
+    const secPassword = await bcrypt.hash(req.body.password, salt);
 
-        try {
-            await User.create({
-                name: req.body.name,
-                password: secPassword,
-                email: req.body.email,
-                location: req.body.location,
-                file: req.file.path // Save file path in database
-            })
-            res.json({ success: true });
-        } catch (error) {
-            console.log(error);
-            res.json({ success: false });
-        }
-    });
+    try {
+        const file = req.file ? req.file.path : ''; // Check if file was uploaded
+        await User.create({
+            name: req.body.name,
+            password: secPassword,
+            email: req.body.email,
+            location: req.body.location,
+            avatar: file // Save file path in database
+        });
+        res.json({ success: true });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false });
+    }
+});
 
 router.post("/loginarchitect", [
     body('email').isEmail(),
     body('password', 'incorrect password').isLength({ min: 5 })
 ], async (req, res) => {
-    let email = req.body.email;
+    const email = req.body.email;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
     try {
-        let userData = await User.findOne({ email });
+        const userData = await User.findOne({ email });
         if (!userData) {
             return res.status(400).json({ errors: "Try logging in with correct credentials" });
         }
@@ -203,7 +327,7 @@ router.post("/loginarchitect", [
                 id: userData.id
             }
         }
-        const authToken = jwt.sign(data, jwtSecret)
+        const authToken = jwt.sign(data, jwtSecret);
         return res.json({ success: true, authToken: authToken });
 
     } catch (error) {
