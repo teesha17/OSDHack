@@ -35,6 +35,9 @@
     background-color: rgb(52, 22, 81);
     color:white;
     border-radius: 10px;
+    font-size: small;
+    width: 20%;
+    height: 20%;
 }
 .BT:hover{
     background-color: rgb(251, 249, 247);

@@ -18,7 +18,7 @@ import LoginSupplier from './screens/login/LoginSupplier.jsx'
 import Charts from './components/Dashboards/ArchitectDashboard.jsx'
 import Gallery from './components/Gallery/Gallery.jsx'
 import Profile from './screens/Profile/Profile.jsx'
-import AppUserProfile from './screens/UserProfile/App.jsx'
+import AppUserProfile from './screens/UserProfile/AppUser.jsx'
 
 export default function App() {
   return (
