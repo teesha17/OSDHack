@@ -9,7 +9,7 @@
 *::-webkit-scrollbar {
   display: none;
 }
-.card {
+.cardd {
     margin: 20px 0px 0px 5vw;
     position: -webkit-sticky; /* for Safari */
     position: sticky;

@@ -83,6 +83,7 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import img from '../../components/Home/./11332329_1186.jpg'
 
 export default function SignUpArchitect() {
   const navigate = useNavigate();
@@ -132,7 +133,7 @@ export default function SignUpArchitect() {
     <>
       <div className='container' style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100vh",width:"100vw" }}>
         <h1>Welcome !!</h1>
-        <Link to="/"><img src="" className='logo-ssc' alt="Logo"></img></Link>
+        <Link to="/"><img src={img} className='logo-ssc' alt="Logo"></img></Link>
         <form onSubmit={handleSubmit} encType="multipart/form-data" style={{width:"80%"}}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
