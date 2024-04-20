@@ -27,7 +27,8 @@ export default function App() {
         <Route path="/" element={<OurHome/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path='/login' element={<Login/>}/>
+        {/* <Route path='/login' element={<LoginPre/>}/> */}
+        <Route path='/loginuser' element={<Login/>}/>
         <Route path='/signup' element={<SignUpPre/>}/>
         <Route path='/createuser' element={<SignUp/>}/>
         <Route path='/createarchitect' element={<SignUpArchitect/>}/>
@@ -36,7 +37,7 @@ export default function App() {
         <Route path='/createcontractor' element={<SignUpContractor/>}/>
         <Route path='/loginarchitect' element={<LoginArchitect/>}/>
         <Route path='/loginsupplier' element={<LoginSupplier/>}/>
-        <Route path='/loginpackers' element={<LoginPackers/>}/>
+        <Route path='/loginpackersmovers' element={<LoginPackers/>}/>
         <Route path='/logincontractor' element={<LoginContractor/>}/>
         <Route path='/dashboard' element={<Charts/>}/>
         <Route path='/products' element ={<Gallery/>}/>

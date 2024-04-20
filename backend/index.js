@@ -14,6 +14,7 @@ app.use('/api',require("./Routes/CreateArchitect"))
 app.use('/api',require("./Routes/CreatePackersMovers"))
 app.use('/api',require("./Routes/CreateSupplier"))
 app.use('/api',require("./Routes/CreateContractor"))
+app.use('/uploads',express.static('uploads'))
 
 
 app.listen(port,()=>

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./About.css"
-import videoo from "../../Assets/house.mp4";
+import videoo from "/house.mp4";
 const AboutSection = () => {
     return (
         

@@ -1,7 +1,6 @@
 const mongoose =require('mongoose');
 
 const {Schema}= mongoose;
-
 const ArchitectSchema = new Schema({
     name:{
         type : String,
@@ -18,6 +17,13 @@ const ArchitectSchema = new Schema({
     password:{
         type: String,
         required:true,
+    },
+    experience:{
+        type: String,
+        required:true,
+    },
+    avatar: {
+        type: String,
     },
 });
 

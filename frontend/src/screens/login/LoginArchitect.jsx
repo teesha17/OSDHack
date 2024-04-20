@@ -8,36 +8,39 @@ export default function LoginArchitect() {
   })
 let navigate = useNavigate();
 
-  const handleSubmit = async(e)=>{
-    e.preventDefault();
-    console.log(JSON.stringify({
-      email: credentials.email,
-      password: credentials.password,}))
-    const response =await fetch("http://localhost:3000/api/loginarchitect",{
-    method:'POST',
-    headers:{
-      'Content-Type':'application/json'
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log(JSON.stringify({
+    email: credentials.email,
+    password: credentials.password,
+  }));
+
+  const response = await fetch("http://localhost:3000/api/loginarchitect", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       email: credentials.email,
       password: credentials.password,
     })
   });
-  const jSon =  await response.json();
-  console.log(jSon);
 
-  if(!jSon.success){
-    alert("enter valid credentials");
-  }
-  if(jSon.success){
-    localStorage.setItem("userEmail",credentials.email);
-    localStorage.setItem("authToken",json.authToken);
-    console.log(localStorage.getItem("authToken"))
+  const jsonResponse = await response.json();
+  console.log(jsonResponse);
+
+  if (!jsonResponse.success) {
+    alert("Enter valid credentials");
+  } else {
+    localStorage.setItem("userEmail", credentials.email);
+    localStorage.setItem("authToken", jsonResponse.authToken);
+    localStorage.setItem("userId", jsonResponse.id); // Store the ID in localStorage
+    console.log(localStorage.getItem("authToken"));
+    console.log(localStorage.getItem("userId"));
     navigate("/");
   }
+}
 
-  
-  }
 
   const handleChange=(event)=>{
     setCredentials({...credentials,[event.target.name] : event.target.value})
