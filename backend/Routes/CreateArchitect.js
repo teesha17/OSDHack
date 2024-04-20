@@ -293,6 +293,7 @@ router.post("/createarchitect", upload.single('avatar'), [
             password: secPassword,
             email: req.body.email,
             location: req.body.location,
+            experience: req.body.experience,
             avatar: file // Save file path in database
         });
         res.json({ success: true });
@@ -335,5 +336,21 @@ router.post("/loginarchitect", [
         res.json({ success: false });
     }
 });
+
+// Backend route to fetch architect data by email
+router.get('/architect', async (req, res) => {
+    const email = req.query.email; // Get email from query parameters
+    try {
+        const architect = await Architect.findOne({ email });
+        if (!architect) {
+            return res.status(404).json({ error: 'Architect not found' });
+        }
+        res.json(architect);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
 
 module.exports = router;

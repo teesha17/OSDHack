@@ -18,6 +18,10 @@ const ArchitectSchema = new Schema({
         type: String,
         required:true,
     },
+    experience:{
+        type: String,
+        required:true,
+    },
     avatar: {
         type: String,
     },

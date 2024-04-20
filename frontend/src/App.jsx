@@ -16,6 +16,8 @@ import LoginContractor from './screens/login/LoginContractor.jsx'
 import LoginPackers from './screens/login/LoginPackers.jsx'
 import LoginSupplier from './screens/login/LoginSupplier.jsx'
 import LoginPre from './screens/LoginPre.jsx'
+
+
 export default function App() {
   return (
     <Router>
@@ -35,6 +37,8 @@ export default function App() {
         <Route path='/loginsupplier' element={<LoginSupplier/>}/>
         <Route path='/loginpackersmovers' element={<LoginPackers/>}/>
         <Route path='/logincontractor' element={<LoginContractor/>}/>
+       
+       
       </Routes>
     </Router>
   )
