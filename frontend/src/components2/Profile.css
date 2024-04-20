@@ -1,0 +1,16 @@
+.only{
+    display:flex;
+    justify-content: space-evenly;
+    margin: 40px;
+}
+*{
+    font-family: "Roboto Condensed", sans-serif;
+}
+.calen{
+    height:10vh;
+    width:40vw;
+
+}
+.App{
+    background-color: white;
+}

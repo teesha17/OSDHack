@@ -41,14 +41,6 @@ function Testimonials() {
           <p className="name_testimonial">Tanya Grant</p>
         </div>
       </div>
-      <div className="footer_testimonial">
-        <h4>No two homes are alike!</h4>
-        <p>
-          Our Elite network, combined with your personal needs, allows us to
-          create a home plan specifically tailored to you.
-        </p>
-        <button>GET A QUOTE</button>
-      </div>
     </div>
     </div>
   );
