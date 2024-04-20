@@ -12,14 +12,13 @@ import IconsSection from '../../components/Icons/Icon';
 import FooterSection from '../../components/footer/Footer';
 import ServicesSection from '../../components/Services/Services';
 import PricingComponent from '../../components/Pricing/Pricing';
-import AppChat from '../Aichat/Aichat';
 function OurHome() {
   return (
     <div className="AppHome">
     <Header/>
   <HomeSection/>    <AboutSection/>
  
-   <AppChat/>
+  
     <IconsSection/>
     <NumberCountingAnimation/>
     <ServicesSection/>

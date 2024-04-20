@@ -43,7 +43,7 @@ function Header() {
         <Link to='/products'>products</Link>
         {/* <a href="#products">products</a> */}
         <a href="#review">review</a>
-        <a href="#contact">contact</a>
+        <Link to='/chat'>Chat</Link>
       </nav>
       <div className="icons">
       <FontAwesomeIcon icon={faHeart} className="icon" />
