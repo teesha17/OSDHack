@@ -101,6 +101,7 @@ export default function SignUpArchitect() {
     formData.append('email', credentials.email);
     formData.append('password', credentials.password);
     formData.append('location', credentials.location);
+    formData.append('experience', credentials.experience);
     formData.append('avatar', credentials.avatar); // Append the avatar file
 
     const response = await fetch("http://localhost:3000/api/createarchitect", {
@@ -149,6 +150,10 @@ export default function SignUpArchitect() {
           <div className="form-group">
             <label htmlFor="address">Address</label>
             <input type="text" className="form-control" placeholder="Address" name="location" value={credentials.location} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="address">experience</label>
+            <input type="text" className="form-control" placeholder="experience" name="experience" value={credentials.experience} onChange={handleChange} />
           </div>
           <div className="form-group">
             <label htmlFor="avatar">Projects</label><br/>

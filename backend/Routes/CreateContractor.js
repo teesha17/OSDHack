@@ -4,9 +4,10 @@ const User = require('../models/Contractor.js')
 const bcrypt=require('bcryptjs')
 const jwt =  require('jsonwebtoken')
 const jwtSecret = "my name is x";
+const upload = require ('../middleware/upload.js')
 const { body, validationResult } = require('express-validator');
 
-router.post("/createcontractor", [
+router.post("/createcontractor", upload.single('avatar'),  [
     body('email').isEmail(),
     body('name').isLength({ min: 5 }),
     body('password', 'incorrect password').isLength({ min: 5 })
@@ -21,11 +22,14 @@ router.post("/createcontractor", [
         let secPassword=await bcrypt.hash(req.body.password,salt)
 
         try {
+            const file = req.file ? req.file.path : ''; 
             await User.create({
                 name: req.body.name,
                 password: secPassword,
                 email: req.body.email,
-                location: req.body.location
+                experience: req.body.experience,
+                location: req.body.location,
+                avatar: file
             })
             res.json({ success: true });
         } catch (error) {
