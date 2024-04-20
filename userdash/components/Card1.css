@@ -1,0 +1,150 @@
+
+.BX{
+    display: flex;
+    font-family: "Roboto Condensed", sans-serif;
+    flex-direction: column;
+    width: 20vw;
+    box-shadow: rgba(5, 5, 11, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px ;
+    border-radius:25px;
+    margin:20% auto;
+    padding:8px;
+    
+}
+.BX2{
+    display: flex;
+    /* justify-content: space-around; */
+    margin:3%;
+    height:3vw;
+    font-size:30%;
+    padding-left:2px;
+    /* border:solid red 1px; */
+}
+.BT{
+  /* margin: 10px 10px 10px 0px; */
+  /* padding: 3px 15px 3px 15px; */
+  /* border:0px; */
+  background-color: E0D8FC;
+  color:black;
+  /* border-radius:15%; */
+  width:80%;
+  height:80%;
+  border-radius:15%;
+  margin:0.5vw;
+  
+}
+.BT1{
+  background-color: rgb(35,16,72);
+  color:white;
+}
+.BT:hover{
+  background-color: rgb(251, 249, 247);
+  color:black;
+  /* border-radius: 10px; */
+  transition-duration: .3s;
+}
+.BICH{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3px;
+    height:100px;
+    background-color: hsl(253,86%,92%);
+    border-radius: 25px;
+    padding:auto 100px;
+}
+.BICH img{
+    height:70px;    
+    width: 73px;
+    border: solid rgb(204, 204, 224) 2px;
+    border-radius: 50%;
+    margin-left:5px;
+    /* padding-right:5px; */
+}
+
+
+.in{
+    
+    padding:0px 5px 0px 0px;
+    border-right: 2px solid rgb(200, 190, 237);
+    
+ 
+}
+
+.inn{
+    height:70px;
+    width:65%;
+    /* background-color: rgb(204, 204, 224); */
+    /* border-radius:20px; */
+    font-size:30px;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    /* padding-left:10px; */
+    /* padding-top:6px; */
+}
+
+
+.notable{
+  margin:5px auto 0px 10px;
+  font-size:80%;
+}
+.content{
+    font-size:50%;
+    display:flex;
+    justify-content: flex-start;
+    margin:0 auto 0px 10px;
+    /* border:solid red 3px; */
+}
+
+.name{
+    font-size:35px;
+    margin:2px 0px 0px 3px;
+    display:flex;
+    justify-content:flex-start;
+}
+.loc{
+    font-size:18px;
+    margin:0px 0px 6px 5px;
+    display:flex;
+    justify-content:flex-start;
+}
+
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .top-image {
+    position: relative; /* Enable absolute positioning for child elements */
+    /* Other styles for top-image... */
+  }
+  
+  .rating-container {
+    display: flex; /* Enable flexbox */
+    justify-content: flex-end; /* Align stars and rating to the right */
+    position: absolute; /* Position at bottom-right corner (inherited from .star) */
+    top: 78%;
+    left:28%;
+    width:70%;
+    margin-bottom:1vh;
+            
+  }
+  /* .rating-container:hover{
+    display:none;
+  } */
+  
+  .rating-container .star {
+    margin-right:1.5%;
+    
+  }
+  
+  .rating-container .ratingval {
+    /* Move rating value styles here, adjust color if needed */
+    float:right;
+    color: white; /* Example color for rating value */
+    margin:0% 3.5% 0% 2%;
+    font-size:1.55rem;
+  }
