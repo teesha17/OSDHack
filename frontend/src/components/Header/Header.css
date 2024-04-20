@@ -9,6 +9,10 @@
     text-transform: capitalize;
     transition: all 0.2s ease; /* Changed transition property value to fix syntax */
   }
+
+  .headerr{
+    height: 100px;
+  }
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -17,8 +21,8 @@
     text-decoration: none;
   }
   a{
-    text-decoration: none;;
-  }
+    text-decoration: none;
+}
   header {
     align-items: center;
     position: fixed;
@@ -46,6 +50,9 @@
     color: var(--pink);
   }
   
+  header a{
+    text-decoration: none;
+  }
   header .navbar a {
     font-size: 2rem;
     padding: 0 1.5rem;

@@ -15,6 +15,11 @@ import LoginArchitect from './screens/login/LoginArchitect.jsx'
 import LoginContractor from './screens/login/LoginContractor.jsx'
 import LoginPackers from './screens/login/LoginPackers.jsx'
 import LoginSupplier from './screens/login/LoginSupplier.jsx'
+import Charts from './components/Dashboards/ArchitectDashboard.jsx'
+import Gallery from './components/Gallery/Gallery.jsx'
+import Profile from './screens/Profile/Profile.jsx'
+import AppUserProfile from './screens/UserProfile/App.jsx'
+
 export default function App() {
   return (
     <Router>
@@ -33,6 +38,11 @@ export default function App() {
         <Route path='/loginsupplier' element={<LoginSupplier/>}/>
         <Route path='/loginpackers' element={<LoginPackers/>}/>
         <Route path='/logincontractor' element={<LoginContractor/>}/>
+        <Route path='/dashboard' element={<Charts/>}/>
+        <Route path='/products' element ={<Gallery/>}/>
+        <Route path='/architect' element ={<Profile/>}/>
+        <Route path='/user' element ={<AppUserProfile/>}/>
+        
       </Routes>
     </Router>
   )

@@ -3,7 +3,7 @@ import "./Footer.css"
 
 const FooterSection = () => {
     return (
-        <section className="footer">
+        <section className="footer" id="contact">
             <div className="box-container">
                 <div className="box">
                     <h3>quick links</h3>
@@ -19,14 +19,7 @@ const FooterSection = () => {
                     <a href="#">my order</a>
                     <a href="#">my favorites</a>
                 </div>
-                <div className="box">
-                    <h3>Locations</h3>
-                    <a href="#">india</a>
-                    <a href="#">USA</a>
-                    <a href="#">France</a>
-                    <a href="#">Japan</a>
-                    <a href="#">Ukraine</a>
-                </div>
+               
 
                 <div className="box">
                     <h3>contact info</h3>

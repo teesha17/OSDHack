@@ -1,0 +1,11 @@
+.only{
+    display:flex;
+    justify-content: space-evenly;
+    margin: 40px;
+}
+*{
+    font-family: "Roboto Condensed", sans-serif;
+}
+.AppProfile{
+    background-color: white;
+}

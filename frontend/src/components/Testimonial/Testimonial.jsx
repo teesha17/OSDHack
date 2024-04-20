@@ -3,7 +3,7 @@ import './Testimonial.css'; // Import your CSS file
 
 function Testimonials() {
   return (
-    <div className="body-testimonial">
+    <div className="body-testimonial" id="review">
     <div className="section__container_testimonial">
       <div className="header_testimonial">
         <p>TESTIMONIALS</p>
@@ -17,7 +17,7 @@ function Testimonials() {
             my house is in the perfect hands.
           </p>
           <hr />
-          <img src="assets/pic-1.jpg" alt="user" />
+          <img src="https://th.bing.com/th/id/OIP.ec0rLMoXSCfm-ESN-RY3GQHaLI?w=178&h=239&c=7&r=0&o=5&pid=1.7" alt="user" />
           <p className="name_testimonial">Allan Collins</p>
         </div>
         <div className="card_testimonial">
@@ -27,7 +27,7 @@ function Testimonials() {
             solved in a matter of days.
           </p>
           <hr />
-          <img src="assets/pic-2.jpeg" alt="user" />
+          <img src="https://th.bing.com/th/id/OIP.ztnYHSkYm_CIewiGUq6iHgHaLR?w=178&h=271&c=7&r=0&o=5&pid=1.7" alt="user" />
           <p className="name_testimonial">Clay Washington</p>
         </div>
         <div className="card_testimonial">
@@ -37,7 +37,7 @@ function Testimonials() {
             repaired, thanks to Sentry Oak.
           </p>
           <hr />
-          <img src="assets/pic-3.jpg" alt="user" />
+          <img src="https://th.bing.com/th/id/OIP.NKSL5xUZ-c5AF1_DDMuZ7AHaLH?rs=1&pid=ImgDetMain" alt="user" />
           <p className="name_testimonial">Tanya Grant</p>
         </div>
       </div>
