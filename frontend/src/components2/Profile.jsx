@@ -1,6 +1,6 @@
 import  ArcitectPage  from './ArcitectPage';
-import YourImage from "./images.jpg";
-import YourImage1 from "./images 1.jpg";
+import YourImage from "./Screenshot 2024-04-21 023013.png";
+import YourImage1 from "./Screenshot 2024-04-21 022918.png";
 import GreenDatesCalendar from './Calendar';
 import Testimonials from './Testimonials';
 import './Profile.css'
