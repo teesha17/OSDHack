@@ -15,8 +15,10 @@ import LoginArchitect from './screens/login/LoginArchitect.jsx'
 import LoginContractor from './screens/login/LoginContractor.jsx'
 import LoginPackers from './screens/login/LoginPackers.jsx'
 import LoginSupplier from './screens/login/LoginSupplier.jsx'
-import LoginPre from './screens/LoginPre.jsx'
-
+import Charts from './components/Dashboards/ArchitectDashboard.jsx'
+import Gallery from './components/Gallery/Gallery.jsx'
+import Profile from './screens/Profile/Profile.jsx'
+import AppUserProfile from './screens/UserProfile/App.jsx'
 
 export default function App() {
   return (
@@ -25,7 +27,7 @@ export default function App() {
         <Route path="/" element={<OurHome/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path='/login' element={<LoginPre/>}/>
+        {/* <Route path='/login' element={<LoginPre/>}/> */}
         <Route path='/loginuser' element={<Login/>}/>
         <Route path='/signup' element={<SignUpPre/>}/>
         <Route path='/createuser' element={<SignUp/>}/>
@@ -37,8 +39,11 @@ export default function App() {
         <Route path='/loginsupplier' element={<LoginSupplier/>}/>
         <Route path='/loginpackersmovers' element={<LoginPackers/>}/>
         <Route path='/logincontractor' element={<LoginContractor/>}/>
-       
-       
+        <Route path='/dashboard' element={<Charts/>}/>
+        <Route path='/products' element ={<Gallery/>}/>
+        <Route path='/architect' element ={<Profile/>}/>
+        <Route path='/user' element ={<AppUserProfile/>}/>
+        
       </Routes>
     </Router>
   )

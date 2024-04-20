@@ -1,4 +1,5 @@
 
+import React from 'react';
 
 // import Header from './components/Header/Header';
 import Header from '../../components/Header/Header';
@@ -13,15 +14,18 @@ import ServicesSection from '../../components/Services/Services';
 import PricingComponent from '../../components/Pricing/Pricing';
 function OurHome() {
   return (
-    <div className="App">
+    <div className="AppHome">
     <Header/>
-    <HomeSection/>
-    <AboutSection/>
+  <HomeSection/>    <AboutSection/>
+ 
+   {/* <AppChat/> */}
     <IconsSection/>
     <NumberCountingAnimation/>
     <ServicesSection/>
   <PricingComponent/>
     <Testimonials/>
+    {/* <OrderCard/> */}
+   
     <FooterSection/>
     {/* <ProfileCards/> */}
     </div>
