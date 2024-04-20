@@ -12,7 +12,7 @@ function HomeSection() {
      
         </p>
        
-       <a href='#' class = 'btn'>Shop Now</a>
+       <a href='#' class = 'btn1'>Shop Now</a>
 
       </div>
     </section>
