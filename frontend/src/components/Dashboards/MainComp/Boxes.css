@@ -2,16 +2,16 @@
 
 
 .card {
-    width: 80%;
-    height: 2%;
+    width: 50%;
+    
 }
 
 
 .cardd-dash{
-  width: 80%;
+  
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     margin-top: 5rem;
     /* margin-left: 1rem; */
    
