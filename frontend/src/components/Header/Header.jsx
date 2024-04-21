@@ -18,10 +18,20 @@ function BasicExample() {
 
       <Dropdown.Menu>
         <Dropdown.Item>
-        <Link to="/architect">Architect</Link> 
+        <Link to="/createarchitect">Architect</Link> 
         </Dropdown.Item>
-        <Dropdown.Item > <Link to="/user">User</Link> </Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item>
+        <Link to="/createsupplier">Supplier</Link> 
+        </Dropdown.Item>
+        <Dropdown.Item>
+        <Link to="/createpackersmovers">Packers and Movers</Link> 
+        </Dropdown.Item>
+        <Dropdown.Item>
+        <Link to="/createcontractor">Contractor</Link> 
+        </Dropdown.Item>
+        <Dropdown.Item > 
+        <Link to="/createuser">User</Link> 
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
@@ -71,7 +81,7 @@ function Header() {
         <FontAwesomeIcon icon={faShoppingCart} className="icon" />
        <Link to="/dashboard"><FontAwesomeIcon icon={faUser} className="icon" /></Link> 
       <BasicExample/>
-      <Link to="/signup"><FontAwesomeIcon icon={faUser} className="icon" /></Link>
+      {/* { <Link to="/signup"><FontAwesomeIcon icon={faUser} className="icon" /></Link>} */}
       </div>
     </header>
   );

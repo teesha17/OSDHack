@@ -12,7 +12,7 @@ import {
 } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 
-function App() {
+function AppDoc() {
     const fileTypes = ["JPEG", "PNG", "JPG", "PDF"];
     const [fileList, setFileList] = useState([]);
     const [selectedFile, setSelectedFile] = useState(null);
@@ -142,4 +142,4 @@ function App() {
     );
 }
 
-export default App;
+export default AppDoc;

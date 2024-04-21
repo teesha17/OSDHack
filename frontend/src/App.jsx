@@ -20,7 +20,7 @@ import Gallery from './components/Gallery/Gallery.jsx'
 import Profile from './screens/Profile/Profile.jsx'
 import AppUserProfile from './screens/UserProfile/AppUser.jsx'
 import AppChat from './screens/Aichat/Aichat.jsx'
-
+import AppDoc from './components2/docmanager.jsx'
 // import AppU from './userdash/AppUserr.jsx'
 // import Charts from './components/Dashboards/ArchitectDashboard.jsx'
 import Arcomponent from './components2/Arcomponent.jsx'
@@ -50,6 +50,7 @@ export default function App() {
         <Route path='/chat' element ={<AppChat/>}/>
         <Route path='/architectDashboard' element ={<Charts/>}/>
         <Route path='/arRoom' element ={<Arcomponent/>}/>
+        <Route path='/appDoc' element ={<AppDoc/>}/>
         {/* <Route path='/userDash' element ={<AppU/>}/> */}
         
       </Routes>
