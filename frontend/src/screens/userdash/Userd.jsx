@@ -2,15 +2,14 @@ import './Userd.css';
 import ReactCardSlider from 'react-card-slider-component';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Card1.css';
-import Card from './Card.js';
 import '@coreui/chartjs/dist/css/coreui-chartjs.css'
 import '@coreui/coreui/dist/css/coreui.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ChatList } from 'react-chat-elements'
 import { PieChart } from '@mui/x-charts/PieChart';
 import 'react-chat-elements/dist/main.css';
-import Sidebr from './Sidebr.js';
-import Top from './Top.js';
+import Sidebr from './Sidebr.jsx';
+import Top from './Top.jsx';
 const data = [
     { id: 0, value: 10, label: 'A' },
     { id: 1, value: 15, label: 'B' },

@@ -3,6 +3,7 @@ import '@coreui/coreui/dist/css/coreui.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-chat-elements/dist/main.css'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import {Link} from 'react-router-dom';
 import'./Userd.css';
 function Sidebr(){
     return(
@@ -14,8 +15,8 @@ function Sidebr(){
   <Menu>
     <MenuItem>Dashboard</MenuItem>
     <MenuItem>Visualiser</MenuItem>
-    <MenuItem> Doc-Manager </MenuItem>
-    <MenuItem> Packers & Movers </MenuItem>
+    <MenuItem component={<Link to="/docss"/>}>Doc-Manager </MenuItem>
+    <MenuItem component={<Link to="/moversss"/>}> Packers & Movers</MenuItem>
     <MenuItem> Finances </MenuItem>
     <MenuItem> Messages </MenuItem>
     <MenuItem> Predictive analysis </MenuItem>

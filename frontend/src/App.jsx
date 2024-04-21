@@ -16,10 +16,14 @@ import LoginContractor from './screens/login/LoginContractor.jsx'
 import LoginPackers from './screens/login/LoginPackers.jsx'
 import LoginSupplier from './screens/login/LoginSupplier.jsx'
 import Charts from './components/Dashboards/ArchitectDashboard.jsx'
-import Gallery from './components/Gallery/Gallery.jsx'
 import Profile from './screens/Profile/Profile.jsx'
 import AppUserProfile from './screens/UserProfile/AppUser.jsx'
 import AppChat from './screens/Aichat/Aichat.jsx'
+import Userdash from './screens/userdash/userdashboard.jsx';
+import Appcard from './components/Productcard/Appcard.jsx';
+import Arcomponent from './components2/Arcomponent.jsx'
+import TextAreaComponent from './components2/Moversandpackers/moversandpackers.jsx';
+import AppDoc from './components2/Doc-manager/docmanager.jsx';
 // import Charts from './components/Dashboards/ArchitectDashboard.jsx'
 export default function App() {
   return (
@@ -41,12 +45,15 @@ export default function App() {
         <Route path='/loginpackersmovers' element={<LoginPackers/>}/>
         <Route path='/logincontractor' element={<LoginContractor/>}/>
         <Route path='/dashboard' element={<Charts/>}/>
-        <Route path='/products' element ={<Gallery/>}/>
+        <Route path='/products' element ={<Appcard/>}/>
         <Route path='/architect' element ={<Profile/>}/>
         <Route path='/user' element ={<AppUserProfile/>}/>
         <Route path='/chat' element ={<AppChat/>}/>
         <Route path='/architectDashboard' element ={<Charts/>}/>
-        
+        <Route path='/userdash' element={<Userdash/>}/>
+        <Route path='/arRoom' element ={<Arcomponent/>}/>
+        <Route path='/moversss' element ={<TextAreaComponent/>}/>
+        <Route path='/docss' element={<AppDoc/>}/>
       </Routes>
     </Router>
   )

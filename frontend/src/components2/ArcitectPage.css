@@ -1,10 +1,14 @@
-.main{
+*{
+  background-color:white
+}
+main{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     height:100vh;
     overflow: auto;
+    background-color:white
 }
 *::-webkit-scrollbar {
   display: none;

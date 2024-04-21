@@ -27,10 +27,12 @@ router.post("/createuser", [
                 email: req.body.email,
                 location: req.body.location
             })
-            res.json({ success: true });
+            const user = await User.findOne({email : req.body.email});
+    
+            res.json({ objects:user,success: true});
         } catch (error) {
             console.log(error);
-            res.json({ success: false });
+            res.json({ success: false }); 
         }
     })
 
