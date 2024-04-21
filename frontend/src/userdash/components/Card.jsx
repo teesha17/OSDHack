@@ -1,5 +1,5 @@
 import Carousel from './Carousel';
-import {StarRating} from './StarRating';
+// import {StarRating} from './StarRating';
 import './Card.css';
 export const Card=({data})=>{
         return(
@@ -8,7 +8,7 @@ export const Card=({data})=>{
             <div className='top-image'>
                 <Carousel images={data.images} />
                 <div className="rating-container">
-                    <div className="star"><StarRating rating={data.rating} /></div>
+                    {/* <div className="star"><StarRating rating={data.rating} /></div> */}
                     <p className="ratingval">{data.rating}</p>
                 </div>
             </div>

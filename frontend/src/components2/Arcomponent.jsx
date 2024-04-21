@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from '../../components/Header/Header';
-import img from "./Imagess.jpg"
+// import Header from '../../components/Header/Header';
+import Header from '../components/Header/Header';
+import img from './Imagess.jpeg'
 import './Arcomponent.css';
 const Arcomponent = () => {
   return (

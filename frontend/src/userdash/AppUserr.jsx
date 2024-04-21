@@ -1,7 +1,8 @@
-import './App.css';
-import  {Userd}  from './components/Userd';
+import './AppUserr.css';
+import  Userd from './components/Userd';
 
-function App() {
+
+function AppU() {
   const dataa= {
     name: "Gaurav Hiroshi",
       location: "Delhi, Mumbai, India",
@@ -26,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppU;
