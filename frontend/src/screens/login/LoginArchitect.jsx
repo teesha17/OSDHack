@@ -15,7 +15,7 @@ const handleSubmit = async (e) => {
     password: credentials.password,
   }));
 
-  const response = await fetch("https://osdhack.onrender.com/api/loginarchitect", {
+  const response = await fetch("http://localhost:3000/api/loginarchitect", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
