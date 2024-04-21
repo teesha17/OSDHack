@@ -13,7 +13,7 @@ let navigate = useNavigate();
     console.log(JSON.stringify({
       email: credentials.email,
       password: credentials.password,}))
-    const response =await fetch("https://osdhack.onrender.com/api/logincontractor",{
+    const response =await fetch("http://localhost:3000/api/logincontractor",{
     method:'POST',
     headers:{
       'Content-Type':'application/json'

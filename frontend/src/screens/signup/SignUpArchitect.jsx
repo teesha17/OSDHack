@@ -104,7 +104,7 @@ export default function SignUpArchitect() {
     formData.append('experience', credentials.experience);
     formData.append('avatar', credentials.avatar); // Append the avatar file
 
-    const response = await fetch("https://osdhack.onrender.com/api/createarchitect", {
+    const response = await fetch("http://localhost:3000/api/createarchitect", {
       method: 'POST',
       body: formData
     });
