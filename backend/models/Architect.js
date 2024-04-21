@@ -25,6 +25,18 @@ const ArchitectSchema = new Schema({
     avatar: {
         type: String,
     },
+    projectName:{
+        type: String,
+    },
+    education:{
+        type: String,
+    },
+    awards:{
+        type: String
+    },
+    projectLink:{
+        type: String
+    }
 });
 
 module.exports = mongoose.model('architect',ArchitectSchema);

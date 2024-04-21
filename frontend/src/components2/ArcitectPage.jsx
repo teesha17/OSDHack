@@ -62,7 +62,7 @@ const ArcitectPage = ({ user }) => {
           <div>
             <div style={{display: "flex", alignItems:"flex-start",justifyContent: "space-around"}}>
               <p style={{margin: "0px",fontSize:"45px"}}> {user.name}
-                <p style={{margin: "0px",fontSize:"15px"}}>Profession: {user.profession}</p>
+                <p style={{margin: "0px",fontSize:"15px"}}>Profession: Architect</p>
                 <p style={{margin: "0px",fontSize:"15px"}}>Location: {user.location}</p>
               </p>
               <img src={user.image} alt="User" className="badge" />
@@ -94,10 +94,13 @@ const ArcitectPage = ({ user }) => {
           </div>
           <div className="item">
             <h3>University</h3>
-            <p>{user.uni}</p>
+            <p>{user.education}</p>
           </div>
         </div>
           <div style={{fontSize:"1.3rem",margin:"1.7rem 0 0.7rem 0"}}>Checkout My work on:</div>
+          <div className='abcd'>
+            <a href={user.projectLink}/>
+          </div>
           <div className="social-icons" >
             <a href={user.twitter} target="_blank" rel="noopener noreferrer">
             <img src={TwitterIcon} alt="Twitter" />

@@ -103,7 +103,11 @@ export default function SignUpArchitect() {
     formData.append('password', credentials.password);
     formData.append('location', credentials.location);
     formData.append('experience', credentials.experience);
-    formData.append('avatar', credentials.avatar); // Append the avatar file
+    formData.append('avatar', credentials.avatar); 
+    formData.append('projectName', credentials.projectName);
+    formData.append('awards', credentials.awards);
+    formData.append('educatiion', credentials.education);
+    formData.append('projectLink', credentials.projectLink);
 
     const response = await fetch("http://localhost:3000/api/createarchitect", {
       method: 'POST',
@@ -159,6 +163,22 @@ export default function SignUpArchitect() {
           <div className="form-group">
             <label htmlFor="avatar">Projects</label><br/>
             <input type="file" className="form-control-file" id="avatar" name="avatar" onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="address">ProjectName</label>
+            <input type="text" className="form-control" placeholder="Project Name" name="projectname" value={credentials.projectName} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="address">Project Link</label>
+            <input type="text" className="form-control" placeholder="Project Link" name="projectlink" value={credentials.projectLink} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="address">Awards</label>
+            <input type="text" className="form-control" placeholder="Awards" name="awards" value={credentials.awards} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="address">Education</label>
+            <input type="text" className="form-control" placeholder="Education" name="education" value={credentials.education} onChange={handleChange} />
           </div>
           <button type="submit" className="m-3 btn btn-success">Submit</button>
           <Link to="/loginarchitect" className='m-3 btn btn-danger'>Already a user?</Link>

@@ -294,7 +294,11 @@ router.post("/createarchitect", upload.single('avatar'), [
             email: req.body.email,
             location: req.body.location,
             experience: req.body.experience,
-            avatar: file // Save file path in database
+            avatar: file ,// Save file path in database
+            projectName: req.body.projectName,
+            awards: req.body.awards,
+            education: req.body.education,
+            projectLink: req.body.projectLink,
         });
         res.json({ success: true });
     } catch (error) {
@@ -337,11 +341,10 @@ router.post("/loginarchitect", [
     }
 });
 
-// Backend route to fetch architect data by email
 router.get('/architect', async (req, res) => {
     const email = req.query.email; // Get email from query parameters
     try {
-        const architect = await Architect.findOne({ email });
+        const architect = await User.findOne({ email });
         if (!architect) {
             return res.status(404).json({ error: 'Architect not found' });
         }
