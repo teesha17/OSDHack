@@ -30,7 +30,8 @@ export default function SignUp()
     })
   });
   const jSon =  await response.json();
-  console.log(jSon);
+  const objectss = jSon.objects;
+  console.log(objectss);
 
   if(!jSon.success){
     alert("enter valid credentials");
@@ -39,7 +40,7 @@ export default function SignUp()
     localStorage.setItem("userEmail",credentials.email);
     localStorage.setItem("authToken",json.authToken);
     console.log(localStorage.getItem("authToken"))
-    navigate("/");
+    navigate("/userdash", { state: { objectss } });
   }
   }
 
@@ -51,7 +52,7 @@ export default function SignUp()
     <>
     <div className='container' style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",height:"100vh"}}>
       <h1>Welcome !!</h1>
-      <Link to="/"><img src={img} className='logo-ssc'></img></Link> 
+      <Link to="/"><img src="" className='logo-ssc'></img></Link> 
       <form onSubmit={handleSubmit}>
       <div className="form-group">
     <label htmlFor="name">Name</label>
