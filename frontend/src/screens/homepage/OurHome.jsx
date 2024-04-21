@@ -1,4 +1,5 @@
 
+import React from 'react';
 
 // import Header from './components/Header/Header';
 import Header from '../../components/Header/Header';
@@ -11,17 +12,21 @@ import IconsSection from '../../components/Icons/Icon';
 import FooterSection from '../../components/footer/Footer';
 import ServicesSection from '../../components/Services/Services';
 import PricingComponent from '../../components/Pricing/Pricing';
+
 function OurHome() {
   return (
-    <div className="App">
+    <div className="AppHome">
     <Header/>
-    <HomeSection/>
-    <AboutSection/>
+  <HomeSection/>    <AboutSection/>
+ 
+ 
     <IconsSection/>
     <NumberCountingAnimation/>
     <ServicesSection/>
   <PricingComponent/>
     <Testimonials/>
+    {/* <OrderCard/> */}
+   
     <FooterSection/>
     {/* <ProfileCards/> */}
     </div>

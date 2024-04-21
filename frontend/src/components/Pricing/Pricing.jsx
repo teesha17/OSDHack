@@ -13,7 +13,7 @@ const PricingComponent = () => {
                     <ul>
                         <li>
                             <FontAwesomeIcon icon={faCheck} />
-                            <span>500GB storage</span>
+                            <span>Find architects</span>
                         </li>
                         <li>
                             <FontAwesomeIcon icon={faCheck} />
@@ -21,11 +21,11 @@ const PricingComponent = () => {
                         </li>
                         <li>
                             <FontAwesomeIcon icon={faCheck} />
-                            <span>Send up to 3GB</span>
+                            <span>Lorem, ipsum.</span>
                         </li>
                         <li className="disable">
                             <FontAwesomeIcon icon={faTimes} />
-                            <span>Unlimited private projects</span>
+                            <span>Lorem, ipsum dolor.</span>
                         </li>
                         <li className="disable">
                             <FontAwesomeIcon icon={faTimes} />

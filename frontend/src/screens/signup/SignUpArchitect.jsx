@@ -83,6 +83,7 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import img from '../../components/Home/./11332329_1186.jpg'
 
 export default function SignUpArchitect() {
   const navigate = useNavigate();
@@ -104,7 +105,7 @@ export default function SignUpArchitect() {
     formData.append('experience', credentials.experience);
     formData.append('avatar', credentials.avatar); // Append the avatar file
 
-    const response = await fetch("http://localhost:3000/api/createarchitect", {
+    const response = await fetch("https://osdhack.onrender.com/api/createarchitect", {
       method: 'POST',
       body: formData
     });

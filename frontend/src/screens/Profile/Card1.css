@@ -1,0 +1,51 @@
+.BX{
+    display: flex;
+    font-family: "Roboto Condensed", sans-serif;
+    flex-direction: column;
+    width: 20vw;
+    box-shadow: rgba(5, 5, 11, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.BX2{
+    display: flex;
+    justify-content: space-around;
+}
+.BICH{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+    height:100px;
+    background-color: rgb(204, 204, 224);
+    border-radius: 15px;
+}
+.BICH img{
+    height: 50px;
+    width: 50px;
+    border: 2px solid red;
+    border-radius: 50%;
+    margin: 8px;
+}
+.He{
+    width:20vw;
+}
+.BT{
+    margin: 10px 10px 10px 20px;
+    padding: 3px 15px 3px 15px;
+    border:0px;
+    background-color: rgb(52, 22, 81);
+    color:white;
+    border-radius: 10px;
+}
+.BT:hover{
+    background-color: rgb(251, 249, 247);
+    color:black;
+    border-radius: 10px;
+    transition-duration: .3s;
+}
+.inn,.in{
+    margin: 15px;
+}
+.in{
+    padding-right: 70px;
+    border-right: 1px solid black;
+}
