@@ -19,7 +19,8 @@ import Charts from './components/Dashboards/ArchitectDashboard.jsx'
 import Gallery from './components/Gallery/Gallery.jsx'
 import Profile from './screens/Profile/Profile.jsx'
 import AppUserProfile from './screens/UserProfile/AppUser.jsx'
-
+import AppChat from './screens/Aichat/Aichat.jsx'
+// import Charts from './components/Dashboards/ArchitectDashboard.jsx'
 export default function App() {
   return (
     <Router>
@@ -43,6 +44,8 @@ export default function App() {
         <Route path='/products' element ={<Gallery/>}/>
         <Route path='/architect' element ={<Profile/>}/>
         <Route path='/user' element ={<AppUserProfile/>}/>
+        <Route path='/chat' element ={<AppChat/>}/>
+        <Route path='/architectDashboard' element ={<Charts/>}/>
         
       </Routes>
     </Router>

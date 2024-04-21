@@ -24,7 +24,7 @@ const Dashboard = () => {
           <DashboardCard title="all projects" iconClass="blue" value="89" statText="increase" />
           <DashboardCard title="team members" iconClass="green" value="5,990" statText="increase" />
           <DashboardCard title="total budget" iconClass="orange" value="$80,990" statText="decrease" />
-          <DashboardCard title="new customers" iconClass="red" value="3" statText="decrease" />
+          {/* <DashboardCard title="new customers" iconClass="red" value="3" statText="decrease" /> */}
         </div>
       </div>
     );

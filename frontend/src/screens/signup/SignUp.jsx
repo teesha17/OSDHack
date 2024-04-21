@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link,json,useNavigate } from 'react-router-dom'
+import img from '../../components/Home/./11332329_1186.jpg'
 export default function SignUp() 
 {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ export default function SignUp()
     <>
     <div className='container' style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",height:"100vh"}}>
       <h1>Welcome !!</h1>
-      <Link to="/"><img src="" className='logo-ssc'></img></Link> 
+      <Link to="/"><img src={img} className='logo-ssc'></img></Link> 
       <form onSubmit={handleSubmit}>
       <div className="form-group">
     <label htmlFor="name">Name</label>

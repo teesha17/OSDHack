@@ -22,7 +22,7 @@ const ArcitectPage = ({ user }) => {
   return (
     <>
     <div className='main'>
-    <div className="card">
+    <div className="cardd">
         <div className="thumbnail-container">
         {user.thumbnailImages.map((thumbnail, index) => (
           <><img
