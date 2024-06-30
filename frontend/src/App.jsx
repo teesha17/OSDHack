@@ -24,7 +24,6 @@ import Appcard from './components/Productcard/Appcard.jsx';
 import Arcomponent from './components2/Arcomponent.jsx'
 import TextAreaComponent from './components2/Moversandpackers/moversandpackers.jsx';
 import AppDoc from './components2/Doc-manager/docmanager.jsx';
-// import Charts from './components/Dashboards/ArchitectDashboard.jsx'
 export default function App() {
   return (
     <Router>
