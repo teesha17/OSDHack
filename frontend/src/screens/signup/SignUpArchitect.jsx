@@ -109,7 +109,7 @@ export default function SignUpArchitect() {
     formData.append('educatiion', credentials.education);
     formData.append('projectLink', credentials.projectLink);
 
-    const response = await fetch("https://osdhack.onrender.com/createarchitect", {
+    const response = await fetch("https://osdhack.onrender.com/api/createarchitect", {
       method: 'POST',
       body: formData
     });

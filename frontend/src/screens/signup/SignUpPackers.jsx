@@ -104,7 +104,7 @@ export default function SignUpContractor() {
     formData.append('experience', credentials.experience);
     formData.append('avatar', credentials.avatar); // Append the avatar file
 
-    const response = await fetch("https://osdhack.onrender.com/createpackersmovers", {
+    const response = await fetch("https://osdhack.onrender.com/api/createpackersmovers", {
       method: 'POST',
       body: formData
     });
