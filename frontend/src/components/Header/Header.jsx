@@ -50,7 +50,8 @@ function ChatExample() {
         <Link to='/chat'>Chat</Link>
         </Dropdown.Item>
         <Dropdown.Item > <Link to="/arRoom">AR Room</Link> </Dropdown.Item>
-
+        <Dropdown.Item > <Link to="/hometour">AI transformer</Link> </Dropdown.Item>
+        <Dropdown.Item > <Link to="/spline">3D Models</Link> </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

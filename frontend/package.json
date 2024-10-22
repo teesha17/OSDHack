@@ -18,8 +18,11 @@
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^2.1.8",
+    "@heroicons/react": "^2.1.5",
     "@mui/material": "^5.15.15",
     "@mui/x-charts": "^7.2.0",
+    "@splinetool/react-spline": "^4.0.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -45,17 +48,20 @@
     "rsuite": "^5.59.1",
     "sass": "^1.75.0",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "^3.4.3",
+    "three": "^0.169.0",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
     "vite": "^5.2.0"
   }
 }

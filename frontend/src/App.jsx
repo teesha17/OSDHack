@@ -23,12 +23,16 @@ import Userdash from './screens/userdash/userdashboard.jsx';
 import Appcard from './components/Productcard/Appcard.jsx';
 import Arcomponent from './components2/Arcomponent.jsx'
 import TextAreaComponent from './components2/Moversandpackers/moversandpackers.jsx';
+import Splinee from './components3/Splinee.jsx'
 import AppDoc from './components2/Doc-manager/docmanager.jsx';
+import HomeTour from './screens/HomeTour.jsx'
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<OurHome/>}/>
+        <Route path="/spline" element={<Splinee/>}/>
+        <Route path="/hometour" element={<HomeTour/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
         {/* <Route path='/login' element={<LoginPre/>}/> */}
